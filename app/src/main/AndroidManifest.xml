@@ -4,7 +4,7 @@
     package="com.example.chatapplication">
 
     <application
-        android:name=".util.ChatApplication"
+        android:name=".di.ChatApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +15,7 @@
         android:theme="@style/Theme.ChatApplication"
         tools:targetApi="31">
         <activity
-            android:name=".BaseActivity"
+            android:name="com.example.chatapplication.activity.BaseActivity"
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"

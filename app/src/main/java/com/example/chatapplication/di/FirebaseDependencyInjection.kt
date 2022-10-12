@@ -1,5 +1,6 @@
 package com.example.chatapplication.di
 
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module
 import dagger.Provides
@@ -12,7 +13,15 @@ import javax.inject.Singleton
 object FirebaseDependencyInjection {
     @Provides
     @Singleton
-    fun provideFirebaseInstance(): FirebaseFirestore {
-        return FirebaseFirestore.getInstance()
-    }
+    fun provideFirebaseInstance()= FirebaseFirestore.getInstance()
+
+    @Provides
+    @Singleton
+    fun provideFirebaseAuth()= FirebaseAuth.getInstance()
+
+
+    @Provides
+    @Singleton
+    fun provideFirebaseStorage()= FirebaseAuth.getInstance()
+
 }
